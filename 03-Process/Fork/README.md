@@ -6,9 +6,9 @@
 
 ## 🔗 Contents
 
-- [실행 방법](https://github.com/yejineee/OperatingSystem/new/master/03-Process/Fork#%EF%B8%8F-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95)
-- [Fork 예제에서 사용한 system call 알아보기](https://github.com/yejineee/OperatingSystem/new/master/03-Process/Fork#%EF%B8%8F-fork-%EC%98%88%EC%A0%9C%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%9C-system-call-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
-- [Fork0.c 설명](https://github.com/yejineee/OperatingSystem/new/master/03-Process/Fork#-fork0c-%EC%84%A4%EB%AA%85)
+- [실행 방법](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/Fork#%EF%B8%8F-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95)
+- [Fork 예제에서 사용한 system call 알아보기](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/Fork#%EF%B8%8F-fork-%EC%98%88%EC%A0%9C%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%9C-system-call-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
+- [Fork0.c 설명](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/Fork#-fork0c-%EC%84%A4%EB%AA%85)
 
 ## ⚙️ 실행 방법
 
