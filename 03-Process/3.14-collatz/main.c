@@ -6,36 +6,36 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "error.h"
-
-typedef long long ll;
-
-void childProcess(int num){
-}
+#include "collatz.h"
 
 bool isPositiveInt(int num){
-	return isdigit(num) != false  && num > 0; 
+	return isdigit(num) == 0 && num > 0; 
 }
 
 bool inputErrorHandler(int argc, char* argv[]){
 	if(argc != 2){
 		printf("%s", inputErrorMsg);
-		return false;
+		return true;
 	}else if(!isPositiveInt(atoi(argv[1]))){
 		printf("%s", inputRangeErrorMsg);
-		return false;
+		return true;
 	}
-	return true;
+	return false;
 }
 
 int main (int argc, char* argv[])
 {
-	inputErrorHandler(argc, argv);
-	pid_t child_pid ;
+	if(inputErrorHandler(argc, argv)){
+		return 1;
+	};
+	long long startNum = atoi(argv[1]);
+	pid_t childPid ;
 	
-	child_pid = fork() ;
-	if (child_pid == 0) { // child process
+	childPid = fork() ;
+	if (childPid == 0) { // child process
 	} 
-	else if (child_pid > 0) { // parent process
+	else if (childPid > 0) { // parent process
+		wait(0x0);
 	}
 	else /* child_pid < 0 */ {
 		fprintf(stderr, "Fork failed.\n") ;
