@@ -1,7 +1,9 @@
-all: collatz
+CC = gcc
+TARGET = main
+DEPENDENCY = main.c error.c
 
-collatz : collatz.c
-	gcc -o collatz collatz.c
+$(TARGET):  $(DEPENDENCY)
+	$(CC) -o $@ $^
 
 clean :
-	rm -rf collatz
+	rm -rf *.o $(TARGET)
