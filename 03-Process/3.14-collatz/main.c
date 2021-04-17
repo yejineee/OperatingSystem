@@ -4,7 +4,8 @@
 #include <sys/wait.h>
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <stdlib.h>
+#include "error.h"
 
 typedef long long ll;
 
@@ -15,13 +16,20 @@ bool isPositiveInt(int num){
 	return isdigit(num) != false  && num > 0; 
 }
 
-bool isInputError(int argc, char* argv[]){
-	
+bool inputErrorHandler(int argc, char* argv[]){
+	if(argc != 2){
+		printf("%s", inputErrorMsg);
+		return false;
+	}else if(!isPositiveInt(atoi(argv[1]))){
+		printf("%s", inputRangeErrorMsg);
+		return false;
+	}
+	return true;
 }
 
 int main (int argc, char* argv[])
 {
-	isInputError(argc, argv);
+	inputErrorHandler(argc, argv);
 	pid_t child_pid ;
 	
 	child_pid = fork() ;
