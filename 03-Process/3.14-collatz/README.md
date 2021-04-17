@@ -3,7 +3,7 @@
 
 ### 📝 문제 
 
-![](https://i.imgur.com/NgNQ3wH.png)
+![](https://i.imgur.com/iVyh7Z9.png)
 
 콜라츠 추측은 위 알고리즘을 계속해서 적용하면 모든 양의 정수는 결국 1이 된다는 것이다.
 
