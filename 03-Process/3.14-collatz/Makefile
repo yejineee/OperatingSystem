@@ -1,6 +1,6 @@
 CC = gcc
 TARGET = main
-DEPENDENCY = main.c error.c
+DEPENDENCY = collatz.c main.c error.c
 
 $(TARGET):  $(DEPENDENCY)
 	$(CC) -o $@ $^
