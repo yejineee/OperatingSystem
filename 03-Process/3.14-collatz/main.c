@@ -28,11 +28,13 @@ int main (int argc, char* argv[])
 	if(inputErrorHandler(argc, argv)){
 		return 1;
 	};
-	long long startNum = atoi(argv[1]);
+	int startNum = atoi(argv[1]);
 	pid_t childPid ;
 	
 	childPid = fork() ;
+
 	if (childPid == 0) { // child process
+		printCollatzSequence(startNum);
 	} 
 	else if (childPid > 0) { // parent process
 		wait(0x0);
