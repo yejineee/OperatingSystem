@@ -3,5 +3,8 @@
 
 extern char* const inputErrorMsg;
 extern char* const inputRangeErrorMsg;
+extern char* const shmOpenErrorMsg;
+extern char* const ftruncateErrorMsg;
+extern char* const mmapErrorMsg;
 
 #endif
