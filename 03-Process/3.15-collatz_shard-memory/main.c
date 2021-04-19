@@ -43,17 +43,17 @@ void* createSharedMemory(const char* name, int size){
 	mode_t rwMode = 0666;
 	int shm_fd = shm_open(name, O_CREAT | O_RDWR, 0666);
 	if(shm_fd == ERROR){
-		fprintf(stderr, "parent - %s - errno: %s \n", shmOpenErrorMsg, strerror(errno));
+		fprintf(stderr, "%s - errno: %s \n", shmOpenErrorMsg, strerror(errno));
 		return NULL;
 	}
 	int code = ftruncate(shm_fd, size);
 	if(code == ERROR){
-		fprintf(stderr, "parent - %s - errno: %d, %s \n", ftruncateErrorMsg, errno, strerror(errno));
+		fprintf(stderr, "%s - errno: %d, %s \n", ftruncateErrorMsg, errno, strerror(errno));
 		return NULL;
 	}
 	void* ptr = mmap(0, size, PROT_READ, MAP_SHARED, shm_fd, 0);
 	if(ptr == MAP_FAILED){
-		fprintf(stderr, "parent - %s - errno: %s \n", mmapErrorMsg, strerror(errno));
+		fprintf(stderr, "%s - errno: %s \n", mmapErrorMsg, strerror(errno));
 		return NULL;
 	}
 	return ptr;
@@ -73,6 +73,19 @@ void* openSharedMemory(const char* name, int size){
 	}
 	return ptr;
 }
+
+bool clearSharedMemory(const char* name, int size){
+	if(shm_unlink(NAME) == ERROR){
+		fprintf(stderr, "%s - errno: %s \n", shmUnlinkErrorMsg, strerror(errno));
+		return false;
+	};
+	if(munmap(0, SIZE) == ERROR){
+		fprintf(stderr, "%s - errno: %s \n", munmapErrorMsg, strerror(errno));
+		return false;
+	}
+	true;
+}
+
 
 int main (int argc, char* argv[])
 {
@@ -98,8 +111,9 @@ int main (int argc, char* argv[])
 	else if (childPid > 0) { // parent process
 		wait(0x0);
 		printf("%s", (char*)mmapPtr);
-		shm_unlink(NAME);
-		munmap(0, SIZE);	
+		if(!clearSharedMemory(NAME, SIZE)){
+			return 1;
+		}
 	}
 	else /* child_pid < 0 */ {
 		fprintf(stderr, "Fork failed.\n") ;
