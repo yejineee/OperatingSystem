@@ -5,18 +5,25 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
 #include "error.h"
 #include "collatz.h"
 
-bool isPositiveInt(int num){
-	return isdigit(num) == 0 && num > 0; 
+bool isPositiveInt(char* num){
+	int len = strlen(num);
+	for(int i = 0; i < len; i++){
+		if(isdigit(num[i]) == false){
+			return false;
+		}
+	}
+	return atoi(num) > 0; 
 }
 
 bool inputErrorHandler(int argc, char* argv[]){
 	if(argc != 2){
 		printf("%s", inputErrorMsg);
 		return true;
-	}else if(!isPositiveInt(atoi(argv[1]))){
+	}else if(!isPositiveInt(argv[1])){
 		printf("%s", inputRangeErrorMsg);
 		return true;
 	}
