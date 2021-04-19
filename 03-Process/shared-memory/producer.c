@@ -16,9 +16,9 @@ int main(){
 	
 	int shm_fd;
 	void *ptr;
+	char buf[SIZE];
 	
 	shm_fd = shm_open(name, O_CREAT | O_RDWR, 0666);
-
 	ftruncate(shm_fd, SIZE);
 
 	ptr = mmap(0, SIZE, PROT_WRITE, MAP_SHARED, shm_fd, 0);	
@@ -27,9 +27,10 @@ int main(){
 		return 1;
 	}
 
-	sprintf(ptr, "%s", msg0);
-	ptr += strlen(msg0);	
-	sprintf(ptr, "%s", msg1);
+	int n = snprintf(buf, SIZE, "%s", msg0);
+	snprintf(buf+n, SIZE-strlen(buf), "%s", msg1);
+	snprintf(ptr, SIZE, "%s", buf);
+
 	
 	return 0;
 }
