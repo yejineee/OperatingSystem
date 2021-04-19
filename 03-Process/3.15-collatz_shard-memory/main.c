@@ -91,21 +91,15 @@ int main (int argc, char* argv[])
 
 	if (childPid == 0) { // child process
 		void* mmapPtr = openSharedMemory(NAME, SIZE);
-		long long num = startNum;
 		char buf[SIZE];
-
-		int n = snprintf(buf, SIZE, "Collatz Sequence : %lld\t", num);
-		while(num != 1){
-			num = collatz(num);
-			n += snprintf(buf+n, SIZE-strlen(buf), "%lld\t", num);
-		}
-		snprintf(buf+n, SIZE-strlen(buf), "\n");
+		bufCollatzSequenceStr(startNum, buf, SIZE);
 		snprintf(mmapPtr, SIZE, "%s", buf);
 	} 
 	else if (childPid > 0) { // parent process
 		wait(0x0);
 		printf("%s", (char*)mmapPtr);
 		shm_unlink(NAME);
+		munmap(0, SIZE);	
 	}
 	else /* child_pid < 0 */ {
 		fprintf(stderr, "Fork failed.\n") ;
