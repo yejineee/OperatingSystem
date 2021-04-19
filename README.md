@@ -14,7 +14,16 @@ Let's study operating system !
 
 ## ✔ 프로세스
 
-- [programming example - fork()](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/Fork)
+### programming 
+
+- [콜라츠 추측](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/3.14-collatz)
+- [콜라츠 추측 - Shared Memory](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/3.15-collatz_shard-memory)
+
+### 예제 & 공룡책 exercise 풀이
+- [example code - fork()](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/Fork)
+- [example code - Shared Memory](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/shared-memory)
 - [[3. Process] Exercise 풀이](https://github.com/yejineee/OperatingSystem/blob/master/docs/%5B3.%20Process%5D%20Exercise%20%ED%92%80%EC%9D%B4.md)
 
 
+## ✔ C 
+- [C - 타입 한정자, 지정자](https://github.com/yejineee/OperatingSystem/blob/master/docs/C%20-%20%ED%83%80%EC%9E%85%20%ED%95%9C%EC%A0%95%EC%9E%90,%20%EC%A7%80%EC%A0%95%EC%9E%90.md)
