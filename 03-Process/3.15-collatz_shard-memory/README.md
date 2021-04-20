@@ -126,7 +126,7 @@ char str [] = "hello";
 
 
 ```
-3.14-collatz/
+3.15-collatz_shard-memory/
 ├── Makefile
 ├── collatz.c: 콜라츠 추측 관련 함수 
 ├── collatz.h
