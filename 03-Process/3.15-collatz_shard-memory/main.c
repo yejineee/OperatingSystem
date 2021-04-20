@@ -83,7 +83,7 @@ bool clearSharedMemory(const char* name, int size){
 		fprintf(stderr, "%s - errno: %s \n", munmapErrorMsg, strerror(errno));
 		return false;
 	}
-	true;
+	return true;
 }
 
 
