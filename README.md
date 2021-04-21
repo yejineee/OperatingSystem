@@ -14,6 +14,9 @@ Let's study operating system !
 
 ## ✔ 프로세스
 
+### Document 
+- [프로세스 생성과 종료](https://github.com/yejineee/OperatingSystem/blob/master/docs/%5B3.%20Process%5D%20Operations%20on%20Processes%20-%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%EC%A2%85%EB%A3%8C.md)
+
 ### programming 
 
 - [콜라츠 추측](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/3.14-collatz)
