@@ -15,7 +15,7 @@
 #include "collatz.h"
 
 const int ERROR = -1;
-const char* NAME = "collatz";
+const char* NAME = "/collatz";
 const int SIZE = 4096;
 
 bool isPositiveInt(char* num){
