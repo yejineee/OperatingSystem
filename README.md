@@ -20,11 +20,11 @@ Let's study operating system !
 ### programming 
 
 - [콜라츠 추측](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/3.14-collatz)
-- [콜라츠 추측 - Shared Memory](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/3.15-collatz_shard-memory)
+- [콜라츠 추측 - POSIX Shared Memory](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/3.15-collatz_shard-memory)
 
 ### 예제 & 공룡책 exercise 풀이
 - [example code - fork()](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/Fork)
-- [example code - Shared Memory](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/shared-memory)
+- [example code -  POSIX Shared Memory](https://github.com/yejineee/OperatingSystem/tree/master/03-Process/shared-memory)
 - [[3. Process] Exercise 풀이](https://github.com/yejineee/OperatingSystem/blob/master/docs/%5B3.%20Process%5D%20Exercise%20%ED%92%80%EC%9D%B4.md)
 
 
