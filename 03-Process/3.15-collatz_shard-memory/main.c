@@ -41,7 +41,7 @@ bool isErrorInInput(int argc, char* argv[]){
 
 void* createSharedMemory(const char* name, int size){
 	mode_t rwMode = 0666;
-	int shm_fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+	int shm_fd = shm_open(name, O_CREAT | O_RDWR, rwMode);
 	if(shm_fd == ERROR){
 		fprintf(stderr, "%s - errno: %s \n", shmOpenErrorMsg, strerror(errno));
 		return NULL;
