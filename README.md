@@ -5,8 +5,6 @@ Let's study operating system !
 
 ## 📑 Study Materials
 
-- 홍신 교수님의 [System Programming](https://sites.google.com/handong.edu/system-programming/unit-3-process/create-a-new-process-using-fork?authuser=0) 강의
-
 - 최린 교수님의 [운영체제 강의](https://www.youtube.com/watch?v=6Q5Gb1fxNMk&list=PLZVSiZyXxX-gkpz6pzlRp0VhMbjF9NYN0&index=1)와 [pdf](http://www.kocw.or.kr/home/search/kemView.do?kemId=670109)
 
 - [Operating System Concepts, 9th Edition International Student Version](https://www.wiley.com/en-gb/Operating+System+Concepts%2C+9th+Edition+International+Student+Version-p-9781118652794)
